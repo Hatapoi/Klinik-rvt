@@ -1,22 +1,40 @@
-import { FiSidebar, FiSlack } from "react-icons/fi";
+import { useState } from "react";
+import { FiSettings, FiSidebar, FiSlack } from "react-icons/fi";
+import { HiOutlineViewGrid } from "react-icons/hi";
 
 const Sidebar = () => {
+    const [isHidden, setIsHidden] = useState<boolean>(false);
+
+    const BarHidden = (): void => {
+        setIsHidden(!isHidden)
+    }
+    
     return(
-        <div className='w-[20%] h-full bg-slate-200'>
+        <form className={`w-[20%] h-full bg-slate-200 ${isHidden ? "hidden" : ""}`}>
           <div className='flex p-3'>
-            <div className='flex me-auto items-center'>
+            <div className='flex me-auto items-center hover: cursor-pointer'>
               <i><FiSlack className="size-9"/></i>
-              <label>Klinik Sehat</label>
+              <h1 className="text-xl">Klinik Sehat</h1>
             </div>
-            <button className='me-2'><FiSidebar className="size-6" /></button>
+            <button 
+                className='me-2 p-2 cursor-pointer rounded-md hover:bg-slate-100'
+                type="button"
+                onClick={BarHidden}
+            >
+                <FiSidebar className="size-6" />
+            </button>
           </div>
-          <div className='p-2 flex flex-col gap-3'>
-            <div className='flex gap-1 ms-5'>
-              <i></i>
-              <label>Dashboard</label>
-            </div>
+          <div className='p-4 flex flex-col'>
+            <label className='flex items-center gap-2 ms-5 p-2 rounded-md hover:bg-slate-100 cursor-pointer'>
+              <i><HiOutlineViewGrid className="size-6"/></i>
+              <p>Dashboard</p>
+            </label>
+            <label className='flex items-center gap-2 ms-5 p-2 rounded-md hover:bg-slate-100 cursor-pointer'>
+              <i><FiSettings className="size-6"/></i>
+              <p>Pengaturan</p>
+            </label>
           </div>
-        </div>
+        </form>
     )
 }
 
