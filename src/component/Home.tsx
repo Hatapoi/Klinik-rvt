@@ -1,11 +1,13 @@
 import doctor from '../assets/dokter.png';
+import anak from '../assets/anak.webp';
+import gigi from '../assets/gigi.webp';
 
 const Home = () => {
     return (
         <div className="h-full w-full">
-            <div className="flex h-[55%] items-center justify-center bg-slate-500">
+            <div className="flex items-center justify-center">
                 <div className="p-12 space-y-10 ">
-                    <h1 className="text-xl md:text-5xl italic whitespace-nowrap">
+                    <h1 className="text-3xl md:text-5xl italic whitespace-nowrap">
                         Di Dalam Tubuh
                         <p className="ms-10 p-3">Yang <span className="font-serif font-semibold text-green-600">Sehat</span> Terdapat</p>
                         Jiwa Yang <span className="font-serif font-semibold text-blue-600">Kuat</span>
@@ -14,7 +16,22 @@ const Home = () => {
                     <button className="p-2 bg-slate-200 rounded-r-lg hover:bg-slate-100">Register</button>
                 </div>
                 <div>
-                    <img className='w-[80%] h-auto' src={doctor} alt="..." />
+                    <img className='w-96 h-72 h-auto' src={doctor} alt="..." />
+                </div>
+            </div>
+
+            <div className='p-5 flex items-center justify-center gap-11'>
+                <div className='relative w-60 h-52 rounded-lg hover:w-64 hover:h-56 cursor-pointer transition-all duration-300'>
+                    <img className='w-full h-full rounded-lg' src={anak} alt="..." />
+                    <span className='p-3 absolute bottom-0 w-full text-white text-center text-lg font-semibold rounded-b-md bg-slate-600 bg-opacity-50'>Poli Anak</span>
+                </div>
+                <div className='relative w-60 h-52 rounded-lg hover:w-64 hover:h-56 cursor-pointer transition-all duration-300'>
+                    <img className='w-full h-full rounded-lg' src={gigi} alt="..." />
+                    <span className='p-3 absolute bottom-0 w-full text-white text-center text-lg font-semibold rounded-b-md bg-slate-600 bg-opacity-50'>Poli Gigi</span>
+                </div>
+                <div className='relative w-60 h-52 rounded-lg hover:w-64 hover:h-56 cursor-pointer transition-all duration-300'>
+                    <img className='w-full h-full rounded-lg' src={anak} alt="..." />
+                    <span className='p-3 absolute bottom-0 w-full text-white text-center text-lg font-semibold rounded-b-md bg-slate-600 bg-opacity-50'>Poli Umum</span>
                 </div>
             </div>
         </div>

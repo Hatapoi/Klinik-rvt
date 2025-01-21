@@ -10,14 +10,14 @@ const Sidebar = () => {
     }
     
     return(
-        <form className={`w-[20%] h-full bg-slate-200 ${isHidden ? "hidden" : ""}`}>
+        <form className={`w-72 h-full bg-slate-200 ${isHidden ? "hidden" : ""}`}>
           <div className='flex p-3'>
             <div className='flex me-auto items-center hover: cursor-pointer'>
               <i><FiSlack className="size-9"/></i>
-              <h1 className="text-xl">Klinik Sehat</h1>
+              <h1 className="text-sm">Klinik Sehat</h1>
             </div>
             <button 
-                className='me-2 p-2 cursor-pointer rounded-md hover:bg-slate-100'
+                className='p-2 cursor-pointer rounded-md hover:bg-slate-100'
                 type="button"
                 onClick={BarHidden}
             >
