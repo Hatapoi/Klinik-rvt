@@ -8,7 +8,7 @@ interface Toggle {
 
 const Sidebar = ({ toggle, toggleSide }: Toggle) => {
     return(
-        <form className={`w-72 h-full bg-slate-200 ${toggle ? "hidden" : ""}`}>
+        <form className={`fixed md:static w-72 h-full bg-slate-200 ${toggle ? "hidden" : ""} z-50`}>
           <div className='flex p-3'>
             <div className='flex me-auto items-center hover: cursor-pointer'>
               <i><FiSlack className="size-9"/></i>

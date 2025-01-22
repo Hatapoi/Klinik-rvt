@@ -7,9 +7,7 @@ interface Toggle {
 
 const SidebarDisplay = ({ toggle, toggleSide}: Toggle) => {
     return (
-        <div className={`absolute flex items-center justify-center p-3 gap-5 
-            ${toggle ? "opacity-100" : "opacity-0 pointer-events-none"} 
-            transition-opacity duration-300 ease-in-out`}>
+        <div className={`absolute top-0 left-0 flex items-center justify-center p-3 gap-5 ${toggle ? "" : "hidden"}`}>
             <button 
                 className='relative inline-block p-2 cursor-pointer rounded-md hover:bg-slate-100'
                 onClick={toggleSide}

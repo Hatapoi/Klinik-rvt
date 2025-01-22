@@ -14,27 +14,29 @@ const Home = () => {
 
     return (
         <div className='h-full flex'>
-            <Sidebar 
+            <Sidebar
                 toggle={isHidden}
                 toggleSide={ToogleSidebar}
             />
             <div className="h-full w-full">
-                <SidebarDisplay 
+                <SidebarDisplay
                     toggle={isHidden}
                     toggleSide={ToogleSidebar}
                 />
                 <div className="flex items-center justify-center">
-                    <div className="p-12 space-y-10 ">
+                    <div className="p-14 flex flex-col gap-8">
                         <h1 className="text-3xl md:text-5xl italic whitespace-nowrap">
                             Di Dalam Tubuh
                             <p className="ms-10 p-3">Yang <span className="font-serif font-semibold text-green-600">Sehat</span> Terdapat</p>
                             Jiwa Yang <span className="font-serif font-semibold text-blue-600">Kuat</span>
                         </h1>
-                        <button className="p-2 bg-blue-600 rounded-l-lg hover:bg-blue-500">Login</button>
-                        <button className="p-2 bg-slate-200 rounded-r-lg hover:bg-slate-100">Register</button>
+                        <div className='flex items-center justify-start'>
+                            <button className="p-2 w-15 bg-blue-600 rounded-l-lg hover:bg-blue-500">Login</button>
+                            <button className="p-2 w-15 bg-slate-200 rounded-r-lg hover:bg-slate-100">Register</button>
+                        </div>
                     </div>
                     <div>
-                        <img className='w-96 h-auto' src={doctor} alt="..." />
+                        <img className='hidden w-96 h-auto md:block' src={doctor} alt="..." />
                     </div>
                 </div>
 
