@@ -1,25 +1,23 @@
-import { useState } from "react";
 import { FiSettings, FiSidebar, FiSlack } from "react-icons/fi";
 import { HiOutlineViewGrid } from "react-icons/hi";
 
-const Sidebar = () => {
-    const [isHidden, setIsHidden] = useState<boolean>(false);
+interface Toggle {
+  toggle: boolean
+  toggleSide: () => void;
+}
 
-    const BarHidden = (): void => {
-        setIsHidden(!isHidden)
-    }
-    
+const Sidebar = ({ toggle, toggleSide }: Toggle) => {
     return(
-        <form className={`w-[20%] h-full bg-slate-200 ${isHidden ? "hidden" : ""}`}>
+        <form className={`fixed md:static w-72 h-full bg-slate-200 ${toggle ? "hidden" : ""} z-50`}>
           <div className='flex p-3'>
             <div className='flex me-auto items-center hover: cursor-pointer'>
               <i><FiSlack className="size-9"/></i>
-              <h1 className="text-xl">Klinik Sehat</h1>
+              <h1 className="text-sm">Klinik Sehat</h1>
             </div>
             <button 
-                className='me-2 p-2 cursor-pointer rounded-md hover:bg-slate-100'
+                className='p-2 cursor-pointer rounded-md hover:bg-slate-100'
                 type="button"
-                onClick={BarHidden}
+                onClick={toggleSide}
             >
                 <FiSidebar className="size-6" />
             </button>

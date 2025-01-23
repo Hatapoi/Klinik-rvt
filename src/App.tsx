@@ -1,12 +1,10 @@
-import Sidebar from './component/Sidebar';
+import Home from './pages/Home';
 
 function App() {
 
   return (
     <main className='h-screen'>
-      <div className='h-full flex'>
-        <Sidebar />
-      </div>
+      <Home />
     </main>
   )
 }
