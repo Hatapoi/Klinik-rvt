@@ -50,7 +50,7 @@ const LoginFeat = ({toggle, regis}: hiddenForm) => {
                     <p>{formState.errors.nomorKesehatan.message}</p>
                 )}
                 <button
-                    className="p-3 mt-5 bg-blue-600 w-52 rounded-md text-white font-semibold w-full"
+                    className="p-3 mt-5 bg-blue-600 rounded-md text-white font-semibold w-full"
                     type="submit"
                 >
                     Login
