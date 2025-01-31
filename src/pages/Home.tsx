@@ -1,6 +1,6 @@
-import doctor from '../assets/dokter.png';
-import anak from '../assets/anak.webp';
-import gigi from '../assets/gigi.webp';
+import doctor from '../component/assets/dokter.png';
+import anak from '../component/assets/anak.webp';
+import gigi from '../component/assets/gigi.webp';
 
 
 const Home = () => {

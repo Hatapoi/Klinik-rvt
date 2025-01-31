@@ -3,7 +3,7 @@ import { FiRotateCcw } from "react-icons/fi";
 
 const UserProfil = () => {
     return (
-        <div className="h-full w-64 ml-4 bg-slate-200 ">
+        <div className="h-full w-40 md:w-72 ml-2 bg-slate-200 ">
             <h3 className="p-3 mt-5 mx-3 rounded-full font-semibold text-center bg-slate-300">M Hatta Ramadhan</h3>
             <div className="p-4 ms-5 flex flex-col">
                 <label className="p-2 flex items-center gap-2 rounded-md hover:cursor-pointer hover:bg-slate-100">
